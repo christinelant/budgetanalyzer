@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Analyzer</title>
+
+    <link rel='stylesheet' href='./stylesheet-budget.css'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Unica+One'>
+
+</head>
+
+<body>
+    <div class='content-container'>
+        <header class='header-container'>
+            <h1>BUDGET VISUALIZER</h1>
+        </header>
+
+        <div class='expense-container'>
+            <h2>Enter Your Estimated Budget</h2>
+            <div class='form-container'>
+                <form>
+                    <input type='text' class='income' placeholder="MONTHLY SALARY">
+
+                    <div class='expense-list'>
+                        <div class='input-container'>
+                            <label for='name'>expense name</label>
+                            <input type='text' class='name' required>
+                        </div>
+                        <div class='input-container'>
+                            <label for=' amount'>cost</label>
+                            <input type='number' class='amount' required>
+                        </div>
+                        <button class='add'>+</button>
+                    </div>
+                </form>
+                <ul class='entered-expenses'></ul>
+                <button class='view-chart'>View Chart</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js-budget.js"></script>
+</body>
+
+</html>
