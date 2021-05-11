@@ -17,7 +17,7 @@ h1 {
   font-size: 60px;
 
   color: white;
-  /* stroke: 3px solid rgba(0, 0, 0, 0.2); */
+  stroke: 3px solid rgba(0, 0, 0, 0.2);
   text-shadow: 0 0 3px black;
 }
 
@@ -32,6 +32,11 @@ ul {
 
 ul li {
   list-style: none;
+}
+
+.charts {
+  display: flex;
+  justify-content: space-around;
 }
 
 .content-container, .content-wrapper {
@@ -100,6 +105,27 @@ ul li {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+.expense {
+  display: grid;
+  grid-template-columns: auto 200px 30px;
+  column-gap: 10px;
+  padding: 3px;
+  background: #FBFBFB;
+  margin: 2px;
+}
+
+.expense .amount {
+  text-align: right;
+}
+
+.expense button {
+  display: none;
+}
+
+.expense:hover button {
+  display: block;
+}
+
 .income {
   width: calc(100% - 16px);
   padding: 8px;
@@ -126,6 +152,10 @@ input {
   border-radius: 50%;
   border: none;
   height: 30px;
+}
+
+.remove{
+  border: none;
 }
 
 .entered-expenses{

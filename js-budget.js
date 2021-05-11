@@ -39,8 +39,9 @@ const buildExpenses = () => {
     for (i = 0; i < expenses.length; i++) {
         console.log(expenses[i])
         str += `
-        <li>
-            ${expenses[i].name} ${expenses[i].amount}
+        <li class='expense'>
+            <span class='name'>${expenses[i].name}</span>
+            <span class='amount'>${expenses[i].amount}</span>
             <button class='remove'>-</button>
         </li>
         `
@@ -52,6 +53,6 @@ const buildExpenses = () => {
 // removes an expense from the list
 removeExpense.addEventListener("click", function (event) {
     event.preventDefault();
-    list.removeChild(list.lastElementChild);
+    form.removeChild(form.lastElementChild);
 });
 
