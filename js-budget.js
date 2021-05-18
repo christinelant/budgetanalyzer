@@ -1,5 +1,4 @@
 const addExpense = document.querySelector(".add")
-const removeExpense = document.querySelector(".remove")
 const list = document.querySelector(".entered-expenses")
 const form = document.querySelector('form')
 
@@ -31,7 +30,7 @@ const addNewExpense = () => {
     buildExpenses()
 }
 
-
+// build expenses array
 const buildExpenses = () => {
     // function loops through the expenses array and builds out the innerHTML and then set it into the expense HTML list
     let str = ""
@@ -39,20 +38,31 @@ const buildExpenses = () => {
     for (i = 0; i < expenses.length; i++) {
         console.log(expenses[i])
         str += `
-        <li class='expense'>
+        <li class='expense expense-${i}' id='${i}'>
             <span class='name'>${expenses[i].name}</span>
             <span class='amount'>${expenses[i].amount}</span>
-            <button class='remove'>-</button>
+            <button onClick='window.removeExpense(event)' class='remove'>-</button>
         </li>
         `
     }
 
+    // add code to html
     list.innerHTML = str
 }
 
-// removes an expense from the list
-removeExpense.addEventListener("click", function (event) {
-    event.preventDefault();
-    form.removeChild(form.lastElementChild);
-});
 
+// remove an expense
+window.removeExpense = (event) => {
+
+    // grab the specified expense
+    const element = event.target.parentElement
+
+    // grab the expense's id
+    const id = element.id
+
+    // delete expense from the array
+    expenses.splice(id, 1)
+
+    // remove the item visually from the screen
+    element.remove()
+}

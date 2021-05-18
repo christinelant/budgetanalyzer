@@ -11,6 +11,7 @@
     <link rel='stylesheet' href='./stylesheet-budget.css'>
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato'>
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Unica+One'>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 </head>
 
@@ -18,19 +19,22 @@
     <div class="content-wrapper">
         <div class='content-container'>
             <header class='header-container'>
-                <h1>BUDGET VISUALIZER</h1>
+                <a href='./index.html'>
+                    <h1>BUDGET VISUALIZER</h1>
+                </a>
             </header>
 
             <div class='chart-container'>
                 <!-- chart.js connection goes here for pie chart -->
-                pie chart goes here
+                <canvas id="myChart"></canvas>
             </div>
         </div>
 
         <a class='enter-expenses' href='./actualBudget.html'>View Actual Month Expenses</a>
     </div>
 
-    <script src="./js-budget.js"></script>
+    <script src="./charts.js"></script>
 </body>
+
 
 </html>
