@@ -1,6 +1,6 @@
 # budgetanalyzer
 
-URL LINK:
+URL LINK TO PROJECT: https://christinelant.github.io/budgetanalyzer/
 
 Project utilizes: HTML, CSS, JS and Charts.js
 
