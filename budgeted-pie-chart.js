@@ -1,26 +1,33 @@
+
+/*
+
+BUDGETED EXPENSE PIE CHART
+
+*/
+
 let budgetChart = document.getElementById('mybudgetChart').getContext('2d');
 
 // grab local storage data
-const expenses = JSON.parse(localStorage.getItem('localExpenses'))
+const expenses = JSON.parse(localStorage.getItem('localBudgetExpenses'))
 
 const budgetedExpenseLabels = []
-const budgetedExpenseLabels = []
+const budgetedExpenseData = []
 
 expenses.forEach(expense => {
     const expenseName = expense.name
     const expenseAmount = expense.amount
 
     budgetedExpenseLabels.push(expenseName)
-    budgetedExpenseLabels.push(expenseAmount)
+    budgetedExpenseData.push(expenseAmount)
 })
 
-let estimatedbudgetChart = new chart(budgetChart, {
+let estimatedbudgetChart = new Chart(budgetChart, {
     type: 'pie',
     data: {
         labels: budgetedExpenseLabels,
         datasets: [{
-            label: 'Budget',
-            data: budgetedExpenseLabels,
+            label: 'Budgeted Expenses',
+            data: budgetedExpenseData,
             backgroundColor: [
                 ['#023047']
             ],
@@ -29,4 +36,3 @@ let estimatedbudgetChart = new chart(budgetChart, {
     },
     options: {},
 });
-

@@ -73,7 +73,7 @@ window.removeExpense = (event) => {
 // local storage
 const updateLocalStorage = () => {
     const stringExpenses = JSON.stringify(expenses)
-    localStorage.setItem('localExpenses', stringExpenses)
+    localStorage.setItem('localBudgetExpenses', stringExpenses.toLowerCase())
 }
 
 // grabs monthly salary input
