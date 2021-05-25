@@ -8,13 +8,14 @@ let actualChart = document.getElementById('myactualChart').getContext('2d');
 
 // grab local storage data
 const actualExpenses = JSON.parse(localStorage.getItem('localActualExpenses'))
+console.log(actualExpenses)
 
 const actualExpenseLabels = []
 const actualExpenseData = []
 
-expenses.forEach(expense => {
-    const expenseName = actualExpenses.name
-    const expenseAmount = actualExpenses.amount
+actualExpenses.forEach(expense => {
+    const expenseName = expense.name
+    const expenseAmount = expense.amount
 
     actualExpenseLabels.push(expenseName)
     actualExpenseData.push(expenseAmount)

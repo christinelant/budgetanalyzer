@@ -9,6 +9,7 @@ let budgetChart = document.getElementById('mybudgetChart').getContext('2d');
 
 // grab local storage data
 const expenses = JSON.parse(localStorage.getItem('localBudgetExpenses'))
+console.log(expenses)
 
 const budgetedExpenseLabels = []
 const budgetedExpenseData = []
