@@ -1,24 +1,32 @@
-let expenseNames = document.getElementsByClassName('.name')
-console.log(expenseNames)
+let budgetChart = document.getElementById('mybudgetChart').getContext('2d');
 
-let chart = document.getElementById('myChart').getContext('2d');
+// grab local storage data
+const expenses = JSON.parse(localStorage.getItem('localExpenses'))
 
-let estimatedChart = new Chart(chart, {
+const budgetedExpenseLabels = []
+const budgetedExpenseLabels = []
+
+expenses.forEach(expense => {
+    const expenseName = expense.name
+    const expenseAmount = expense.amount
+
+    budgetedExpenseLabels.push(expenseName)
+    budgetedExpenseLabels.push(expenseAmount)
+})
+
+let estimatedbudgetChart = new chart(budgetChart, {
     type: 'pie',
     data: {
-        labels: ['Rent', 'Food', 'Clothing'],
+        labels: budgetedExpenseLabels,
         datasets: [{
             label: 'Budget',
-            data: [1000, 200, 100],
+            data: budgetedExpenseLabels,
             backgroundColor: [
-                ['#DEC376']
+                ['#023047']
             ],
-            hoverBackgroundColor: 'blue'
+            hoverBackgroundColor: '#8ecae6'
         }]
     },
     options: {},
 });
 
-// estimatedChart.datasetOverride = {
-
-// }

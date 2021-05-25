@@ -28,6 +28,7 @@ const addNewExpense = () => {
 
     // call buildExpenses
     buildExpenses()
+    updateLocalStorage()
 }
 
 // build expenses array
@@ -65,4 +66,21 @@ window.removeExpense = (event) => {
 
     // remove the item visually from the screen
     element.remove()
+    updateLocalStorage()
 }
+
+
+// local storage
+const updateLocalStorage = () => {
+    const stringExpenses = JSON.stringify(expenses)
+    localStorage.setItem('localExpenses', stringExpenses)
+}
+
+// grabs monthly salary input
+const income = document.querySelector('.income')
+
+income.addEventListener('input', function (event) {
+    const incomeValue = event.target.value
+    localStorage.setItem('income', incomeValue)
+})
+
