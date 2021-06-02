@@ -161,3 +161,15 @@ input {
 .entered-expenses{
   margin: 20px 0px;
 }
+
+.comparison-wrapper {
+  padding: 20px;
+  background: white;
+  border-radius: 20px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.on-budget {
+  color: #6c757d
+}

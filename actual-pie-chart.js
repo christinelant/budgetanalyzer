@@ -28,10 +28,9 @@ let actualPieChart = new Chart(actualChart, {
         datasets: [{
             label: 'Actual Expenses',
             data: actualExpenseData,
-            backgroundColor: [
-                ['#023047']
-            ],
-            hoverBackgroundColor: '#8ecae6'
+            backgroundColor: ["#d9ed92", "#b5e48c", "#99d98c", "#52b69a", "#168aad", "#1e6091", "#184e77", "#577590"],
+            hoverBackgroundColor: ["#e9c46a"],
+            hoverBorderColor: ['black']
         }]
     },
     options: {},
