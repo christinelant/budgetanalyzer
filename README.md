@@ -1,7 +1,6 @@
 # budgetanalyzer
 
 URL LINK TO PROJECT: https://christinelant.github.io/budgetanalyzer/
-**Project still under construction, to be completed by 6/7/2021**
 
 Project utilizes: HTML, CSS, JS and Charts.js
 
